@@ -5,7 +5,7 @@ Ciphers* (Oxford University Press), a popular introduction to the subject. Its l
 (p.158 in the Gale 1974 facsimile; reportedly p.144 in the 1949 "revised and reset" edition)
 closes the chapter on deciphering with a challenge: "Here is a cryptogram upon which the reader
 is invited to test his skill." It gives 395 digits in five-figure groups, and no method or
-hint. No solution has been published. Later printings are reported to have dropped the
+hint. No accepted solution has been published. Later printings are reported to have dropped the
 challenge, and d'Agapeyeff is said to have forgotten how he made it.
 
 ```
@@ -40,12 +40,17 @@ digit from 1-5: cells of a 5 × 5 square with labelled rows. 196 = 14 × 14, and
 flip the alternation for the rest of the text, and the pattern is unbroken in all 196 pairs.
 
 The format matches the **Mirabeau cipher** in L. C. S. Mansfield's *The Solution of Codes and
-Ciphers* (1936, pp.29-33). There each letter is a group label plus a position 1-5. Mansfield's
-example denominator line, `71 64 92 74 94 85 65 91 75 83`, has the challenge's exact layout and
-uses the same pairs. d'Agapeyeff mentions Mansfield in his text but leaves him out of his
-bibliography. His own book shows the same surface form too: its "German Army Cipher" (p.103)
-turns letters, letter groups and words into two-digit numbers from a 10 × 10 table with
-mixed-order row and column labels, and prints them run together in five-figure groups
+Ciphers* (1936, pp.29-33). There each letter is written as a group label, then its position
+1-5 in the group, as in the challenge. Mansfield's example denominator line,
+`71 64 92 74 94 85 65 91 75 83`, has the challenge's exact layout and uses the same pairs. His
+key alphabets are arbitrary mixtures, not built from a keyword. His own Mirabeau challenge
+(p.31), which we solved, reads "There will remain as surplus the divisional unit of one of the
+two divisions…"; it too has a slip (one letter enciphered with another's number).
+d'Agapeyeff mentions Mansfield in his text but leaves him out of his bibliography.
+
+d'Agapeyeff's own book shows the same surface form too: its "German Army Cipher" (p.103) turns
+letters, letter groups and words into two-digit numbers from a 10 × 10 table with mixed-order
+row and column labels, and prints them run together in five-figure groups
 (`42967 93823 75232 …`).
 
 ### 2. The last column is different, and the rest uses only 13 symbols (solid)
@@ -87,7 +92,9 @@ symbol their triple repeats: row 1 starts with 75, row 4 with 63 (p ≈ 0.004, n
 book itself says triple letters mark the end of a message (p.113). Read this way there are
 three messages (rows 1-3, 4-7 and 8-14), and the 14 × 14 layout is how the text was written.
 That argues against any transposition that moves columns. Since the triples survive intact
-while everything else is flat, they were added after whatever made the body.
+while everything else is flat, they were added after whatever made the body. Apart from the
+frames, the three messages look alike: symbol use, digits, evenness and repeats show no
+difference beyond chance.
 
 Most of the challenge's ingredients sit within ten pages of the book's Chapter V, "Military
 Codes and Ciphers": two-digit numbers printed in five-figure groups (the German Army Cipher,
@@ -97,15 +104,24 @@ dummy letters (pp.109-111), and the triple end-of-message marker (p.113). If he 
 challenge from his own material, this chapter, together with Mansfield's Mirabeau for the pair
 format, is the likeliest source.
 
-### 6. The 13 cells are where A-M fall in a keyword square (possible)
+### 6. The 13 cells come from one region of the square; why is open (possible)
 
 Numbered in reading order, the 13 body cells sit in a tight window of the 25-cell square
-(1 in 5,000 for random cell sets), with two gaps. That is exactly where the letters A-M land in
-a keyword-mixed square with Q left out (as in d'Agapeyeff's own square on p.16), for many
-ordinary keywords; the column-14 cells then fall on N-Z letters. It would mean the body is
-written in the first half of the alphabet. But the window measure was chosen after looking,
-and a 13-symbol alphabet simply written into the first cells of a square explains it as well.
-Every key method tested under this model came out negative (below).
+(1 in 5,000 for random cell sets), with two gaps. One explanation: they are exactly where the
+letters A-M land in a keyword-mixed square with Q left out (as in d'Agapeyeff's own square on
+p.16); 207 of about 108,000 ordinary words and word pairs as keywords give this exact set, and
+the column-14 cells then fall on N-Z letters. That would mean the body is written in the first
+half of the alphabet.
+
+But simpler processes explain the set nearly as well. "Thirteen cells chosen among the first
+part of the square" gives this exact set with probability about 1 in 5,500, against about 1 in
+520 for the keyword square. That is a factor of 10 in the keyword square's favour, but only for
+one of the eight square variants that were searched (A-M or N-Z, I/J merged or Q dropped,
+filled by rows or by columns); spread over those, the factor is about 1-2. Mansfield, whose
+format d'Agapeyeff follows, used arbitrary mixed alphabets rather than keyword squares, which
+makes the keyword reading less natural still. So the cell pattern shows a region of the square
+was used, not that it was A-M of a keyword square. Every key method tested under that model
+came out negative (below), and those results only matter if the model is right.
 
 ### 7. The author's own mistakes don't explain it (solid)
 
@@ -130,7 +146,8 @@ Searches were power-checked on simulated texts; the rest follow from counts.
 - Periodic keys over the grid (Nihilist, Vigenère, Gronsfeld), periods 2-26; nulls at regular
   spacing; a separate alphabet per message or row; column 14 as a checksum.
 - Only the 1-5 digits carrying the message; Mansfield's fraction layout; a straddling
-  checkerboard; fixed groups of 2-3 symbols per letter; digit-level fractionation.
+  checkerboard over the 13 symbols; fixed groups of 2-3 symbols per letter; digit-level
+  fractionation.
 - A dictionary or number code as written, under single columnar transposition (widths up to
   about 10), double columnar (widths 5-7) or a Nihilist square; a number code written as letters.
 - Two letters per symbol (Wolseley's square, Porta pairs, any fixed pairing) without a key;
@@ -152,11 +169,11 @@ Searches were power-checked on simulated texts; the rest follow from counts.
 
 - **What makes the body.** It has to lose information (13 symbols for 26 letters) and leave
   no structure: a non-repeating key over a 13-symbol system, a code under a transposition too
-  wide to search, or text built to look like a cipher with some mechanical aid (§4). With 182 symbols and letter-level
-  statistics, a key longer than about 40 letters can't be found: wrong keys outscore the true
-  one. The symbols do carry enough information to fix both a message and an unknown English
-  running key (about 670 bits, against roughly 400-500 needed), so only a far stronger language
-  model than letter statistics could test that case.
+  wide to search, or text built to look like a cipher with some mechanical aid (§4). With 182
+  symbols and letter-level statistics, a repeating key longer than about 40 letters can't be
+  found: wrong keys outscore the true one. The symbols do carry enough information to fix both
+  a message and an unknown English running key (about 670 bits, against roughly 400-500
+  needed), so only a far stronger language model than letter statistics could test that case.
 - **What d'Agapeyeff said.** The earliest discussions are not available online: David
   Shulman's articles in *The Cryptogram* (1952, 1959), Jim Gillogly's (1994) and Wayne
   Barker's in *Cryptologia* (1978). They are the most likely place to find what he told people.
@@ -172,7 +189,7 @@ research the cipher's history and earlier attempts.
 
 - A. d'Agapeyeff, *Codes and Ciphers*, Oxford University Press 1939; Gale Research facsimile
   1974, [Internet Archive `codesciphers0000daga`](https://archive.org/details/codesciphers0000daga).
-  Challenge p.158; examples pp.33-35, 50-51, 109-126, 141-158.
+  Challenge p.158; examples pp.33-35, 50-51, 102-130, 141-158.
 - L. C. S. Mansfield, *The Solution of Codes and Ciphers*, Alexander Maclehose 1936,
   [Internet Archive `solutionofcodesc0000unse`](https://archive.org/details/solutionofcodesc0000unse).
   Mirabeau cipher pp.29-33 and 151-153.
