@@ -2,11 +2,11 @@
 
 In 1939 Alexander d'Agapeyeff, a Russian-born British cartographer, published *Codes and
 Ciphers* (Oxford University Press), a popular introduction to the subject. Its last page
-(p.158 in the Gale 1974 facsimile; p.144 in the 1949 "revised and reset" edition) closes the
-chapter on deciphering with a challenge: "Here is a cryptogram upon which the reader is invited
-to test his skill." It gives 395 digits in five-figure groups, and no method or hint. Nobody has
-solved it. The challenge was dropped from later printings, and d'Agapeyeff is said to have
-forgotten how he made it.
+(p.158 in the Gale 1974 facsimile; reportedly p.144 in the 1949 "revised and reset" edition)
+closes the chapter on deciphering with a challenge: "Here is a cryptogram upon which the reader
+is invited to test his skill." It gives 395 digits in five-figure groups, and no method or
+hint. No solution has been published. Later printings are reported to have dropped the
+challenge, and d'Agapeyeff is said to have forgotten how he made it.
 
 ```
 75628 28591 62916 48164 91748 58464 74748 28483 81638 18174
@@ -165,7 +165,8 @@ research the cipher's history and earlier attempts.
   [Internet Archive `solutionofcodesc0000unse`](https://archive.org/details/solutionofcodesc0000unse).
   Mirabeau cipher pp.29-33 and 151-153.
 - Craig P. Bauer, *Unsolved! The History and Mystery of the World's Greatest Ciphers*,
-  Princeton University Press 2017, ch. 9 (the "forgot the method" statement).
+  Princeton University Press 2017, ch. 9 (the "forgot the method" statement; seen only in
+  search snippets).
 - Wayne G. Barker, "The Unsolved D'Agapeyeff Cipher", *Cryptologia* 2(2), 1978, 144-147
   (not seen).
 - David Shulman ("Ab Struse"), "The d'Agapeyeff Cryptogram: A Challenge", *The Cryptogram*
@@ -183,10 +184,13 @@ research the cipher's history and earlier attempts.
 
 ## Credits
 
-- **Jim Gillogly** (1994) identified Mansfield's book and the Mirabeau cipher as
-  d'Agapeyeff's unacknowledged source.
-- **Nick Pelling and his correspondent Marie** (Cipher Mysteries, 2017) traced the Nihilist
-  example to Kerckhoffs and found its reversed direction; **Cyril Pineau** (2026 comments) showed
-  the key is an involution, which hides the reversal.
-- **Menno Knul and Nick Pelling** reported that the 1949 edition keeps the challenge with the
-  same digits, including the lone 04.
+- **Jim Gillogly**'s 1994 article in *The Cryptogram* compared the challenge with Mansfield's
+  Mirabeau cipher. We have not seen the article; secondary summaries say it names Mansfield as
+  an unacknowledged source of d'Agapeyeff's, which is what pointed us to Mansfield's book.
+- **Nick Pelling** (Cipher Mysteries, 2017), following an email from a correspondent, traced the
+  Nihilist example to Kerckhoffs and found its reversed direction; **Cyril Pineau** (comments
+  there, 2026) noted that the key's order is its own inverse, which hides the reversal. We
+  checked both points.
+- **Menno Knul and Nick Pelling** (Cipher Mysteries comments) report owning the 1949 edition and
+  that it keeps the challenge with the same digits, including the lone 04. We have not seen
+  that edition.
