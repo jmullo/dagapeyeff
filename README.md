@@ -43,7 +43,10 @@ The format matches the **Mirabeau cipher** in L. C. S. Mansfield's *The Solution
 Ciphers* (1936, pp.29-33). There each letter is a group label plus a position 1-5. Mansfield's
 example denominator line, `71 64 92 74 94 85 65 91 75 83`, has the challenge's exact layout and
 uses the same pairs. d'Agapeyeff mentions Mansfield in his text but leaves him out of his
-bibliography.
+bibliography. His own book shows the same surface form too: its "German Army Cipher" (p.103)
+turns letters, letter groups and words into two-digit numbers from a 10 × 10 table with
+mixed-order row and column labels, and prints them run together in five-figure groups
+(`42967 93823 75232 …`).
 
 ### 2. The last column is different, and the rest uses only 13 symbols (solid)
 
@@ -78,6 +81,14 @@ three messages (rows 1-3, 4-7 and 8-14), and the 14 × 14 layout is how the text
 That argues against any transposition that moves columns. Since the triples survive intact
 while everything else is flat, they were added after whatever made the body.
 
+Most of the challenge's ingredients sit within ten pages of the book's Chapter V, "Military
+Codes and Ciphers": two-digit numbers printed in five-figure groups (the German Army Cipher,
+p.103), number keys that use only a corner of the 10 × 10 grid (a German spy cipher, numbers
+11-38, p.104), Lord Wolseley's square, whose 25 cells fall into 13 numbered classes, with
+dummy letters (pp.109-111), and the triple end-of-message marker (p.113). If he assembled the
+challenge from his own material, this chapter, together with Mansfield's Mirabeau for the pair
+format, is the likeliest source.
+
 ### 6. The 13 cells are where A-M fall in a keyword square (possible)
 
 Numbered in reading order, the 13 body cells sit in a tight window of the 25-cell square
@@ -90,9 +101,10 @@ Every key method tested under this model came out negative (below).
 
 ### 7. The author's own mistakes don't explain it (solid)
 
-Eleven worked examples in the book can be recomputed from the page; all were checked against
-the page images. He applies the substitution methods correctly. His hand encipherment leaves isolated wrong
-letters (about 1 in 15-30: Beaufort wheel, Playfair, transposition readout), and his one
+Seventeen worked examples in the book, letter and number ciphers, can be recomputed from the
+page; all were checked against the page images. He applies the methods correctly. His hand
+encipherment leaves isolated wrong letters or numbers (about 1 in 14-30: Beaufort wheel,
+Playfair, transposition readout, the French Auvray number cipher), and his one
 systematic error is the direction of the Russian Nihilists' double transposition, copied from
 Kerckhoffs. Neither kind of error can turn English into 13 even symbols: wrong cells add
 symbols rather than remove them, and transpositions keep counts. "He botched a method from his
@@ -109,11 +121,18 @@ Searches were power-checked on simulated texts; the rest follow from counts.
   checkerboard; fixed groups of 2-3 symbols per letter; digit-level fractionation.
 - A dictionary or number code as written, under single columnar transposition (widths up to
   about 10), double columnar (widths 5-7) or a Nihilist square; a number code written as letters.
-- Two letters per symbol (Wolseley's square, Porta pairs, any fixed pairing) without a key.
+- Two letters per symbol (Wolseley's square, Porta pairs, any fixed pairing) without a key;
+  also Wolseley's square with the cell number written instead of the partner letter (exactly
+  13 symbols) and a new keyword for each message, with or without dummies: the third message
+  is far too even for it.
+- Any passage of d'Agapeyeff's or Mansfield's book as the plaintext, under his own letter
+  pairings (Porta, Wolseley) and any transposition: no passage of English has letter counts
+  that fit.
 - Under the A-M model (§6): the book's three ways to hide a key's period (p.122: autokey; one
   key letter per word, for any keyword; an interrupted key, for any keyword of 4-7 letters); a
   repeating keyword up to 20 letters; a running key from any page of d'Agapeyeff's or
-  Mansfield's book, under 16 table-reading rules.
+  Mansfield's book, under 16 table-reading rules; every key and every example message printed
+  in the book, as a key.
 - Only the denominator line of a Mansfield Mirabeau being printed, when the key alphabet comes
   from an ordinary word or phrase.
 
@@ -121,9 +140,11 @@ Searches were power-checked on simulated texts; the rest follow from counts.
 
 - **What makes the body.** It has to lose information (13 symbols for 26 letters) and leave
   no structure: a non-repeating key over a 13-symbol system, a code under a transposition too
-  wide to search, or text built to look like a cipher. With 182 symbols, a repeating key
-  longer than about 40 letters can't be found by search even in principle: wrong keys
-  outscore the true one.
+  wide to search, or text built to look like a cipher. With 182 symbols and letter-level
+  statistics, a key longer than about 40 letters can't be found: wrong keys outscore the true
+  one. The symbols do carry enough information to fix both a message and an unknown English
+  running key (about 670 bits, against roughly 400-500 needed), so only a far stronger language
+  model than letter statistics could test that case.
 - **What d'Agapeyeff said.** The earliest discussions are not available online: David
   Shulman's articles in *The Cryptogram* (1952, 1959), Jim Gillogly's (1994) and Wayne
   Barker's in *Cryptologia* (1978). They are the most likely place to find what he told people.
