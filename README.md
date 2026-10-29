@@ -54,13 +54,14 @@ Written as 14 rows of 14 pairs, every rare pair (92, 93, 94, 04, 71) falls in co
 other 182 pairs (the "body") use exactly **13** different cells, evenly (chi-square 8.7 on 12
 degrees of freedom), and never any of the rare ones.
 
-### 3. So it is not one letter per pair, in any language, under any transposition (solid)
+### 3. So it is not one letter per pair, under any transposition (solid)
 
 A transposition moves symbols but never changes how often each one occurs. 182 letters of
 English always use 18 or more different letters (0 of 20,000 samples used 13 or fewer), and
 none come close to using 13 letters evenly. So no "square substitution, then any
-transposition" can have produced the body, whatever the square, key or language. This
-excludes the model behind most published attacks.
+transposition" of English can have produced the body, whatever the square or key. Only English
+was tested; other European languages also use 20 or more letters, so the same argument should
+hold for them. This excludes the model behind most published attacks.
 
 ### 4. The body looks like random symbols (solid)
 
@@ -70,6 +71,13 @@ coincidences at periods 2-26, and dependence between neighbours (all p between 0
 An English text through any fixed two-letters-per-symbol code is far less even (E alone is
 12.7% of English; the body's most common symbol is 11%). Something removed all letter
 structure: a key that never repeats, a code, or text with no meaning.
+
+It does not look hand-invented either. People making up "random" symbols avoid writing the
+same one twice in a row, use the symbols too evenly, and step to neighbouring values. The body
+shows none of this: it has slightly *more* immediate repeats than chance (17 against 13
+expected), and normal counts, gaps and steps. A writer who merely halved the natural rate of
+repeats would produce 17 or more only 2 times in 10,000. If the text has no meaning, it was
+still made with a mechanical aid (dice, a table, a key), not by hand.
 
 ### 5. The text was laid out as three messages, with formatting added on top (likely)
 
@@ -114,7 +122,11 @@ own book" would need an error he makes nowhere else.
 
 Searches were power-checked on simulated texts; the rest follow from counts.
 
-- One letter per pair, with or without any transposition, in any language (§3).
+- One letter per pair, with or without any transposition (§3).
+- A digit-level straddling checkerboard (single digits for common letters, two-digit codes for
+  the rest): there are too few spare digits. The one published claim of this kind gives single
+  digits to nine letters, which leaves only 0 as a prefix for A, O, N and the rest, and the
+  text has four zeros in all.
 - Periodic keys over the grid (Nihilist, Vigenère, Gronsfeld), periods 2-26; nulls at regular
   spacing; a separate alphabet per message or row; column 14 as a checksum.
 - Only the 1-5 digits carrying the message; Mansfield's fraction layout; a straddling
@@ -140,7 +152,7 @@ Searches were power-checked on simulated texts; the rest follow from counts.
 
 - **What makes the body.** It has to lose information (13 symbols for 26 letters) and leave
   no structure: a non-repeating key over a 13-symbol system, a code under a transposition too
-  wide to search, or text built to look like a cipher. With 182 symbols and letter-level
+  wide to search, or text built to look like a cipher with some mechanical aid (§4). With 182 symbols and letter-level
   statistics, a key longer than about 40 letters can't be found: wrong keys outscore the true
   one. The symbols do carry enough information to fix both a message and an unknown English
   running key (about 670 bits, against roughly 400-500 needed), so only a far stronger language
