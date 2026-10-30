@@ -61,12 +61,12 @@ degrees of freedom), and never any of the rare ones.
 
 ### 3. So it is not one letter per pair, under any transposition (solid)
 
-A transposition moves symbols but never changes how often each one occurs. 182 letters of
-English always use 18 or more different letters (0 of 20,000 samples used 13 or fewer), and
-none come close to using 13 letters evenly. So no "square substitution, then any
-transposition" of English can have produced the body, whatever the square or key. Only English
-was tested; other European languages also use 20 or more letters, so the same argument should
-hold for them. This excludes the model behind most published attacks.
+A transposition moves symbols but never changes how often each one occurs. A 182-letter
+passage of real text uses at least 16 different letters in every language tried (English 17,
+French, Latin and Italian 16, German and Spanish 17, Russian in Cyrillic 21; 0 of 20,000
+passages per language used 13 or fewer), and none come close to using 13 letters evenly. So no
+"square substitution, then any transposition" of these languages can have produced the body,
+whatever the square or key. This excludes the model behind most published attacks.
 
 ### 4. The body looks like random symbols (solid)
 
@@ -154,6 +154,21 @@ Searches were power-checked on simulated texts; the rest follow from counts.
   also Wolseley's square with the cell number written instead of the partner letter (exactly
   13 symbols) and a new keyword for each message, with or without dummies: the third message
   is far too even for it.
+- Any fixed table from English letters to the 13 symbols, found by standard EM decipherment
+  with the table left free. This covers two letters per symbol, uneven letter classes, and
+  homophonic tables in which a letter may be written as any of several symbols (the one way to
+  make 13 symbols come out even by design). Tested along rows, down columns and along 44
+  keyless routes (diagonals, boustrophedon, the book's up-and-down columns, spirals); with a
+  dummy every 3rd-5th symbol; with a new table for each message; with the spaces between words
+  enciphered too; with a short repeating key (2-6) switching between tables; and with two
+  symbols per letter. Also a number code under the same routes. Along rows and columns the
+  table test was repeated with French, German, Latin, Italian and Spanish plaintext; for
+  Russian it is weaker (see below).
+- The symbols as mere carriers of a two- or three-class code (Bacon's biliteral alphabet and a
+  trilateral code, both printed in the book, the trilateral with any table), or of Morse dots,
+  dashes and gaps, the writer picking any symbol of the right class.
+- Symbols dealt from a deck of cards (13 ranks; four rows are 52 symbols) or any habit of using
+  every symbol in turn: no stretch of the text is more balanced than chance.
 - Any passage of d'Agapeyeff's or Mansfield's book as the plaintext, under his own letter
   pairings (Porta, Wolseley) and any transposition: no passage of English has letter counts
   that fit.
@@ -174,6 +189,11 @@ Searches were power-checked on simulated texts; the rest follow from counts.
   found: wrong keys outscore the true one. The symbols do carry enough information to fix both
   a message and an unknown English running key (about 670 bits, against roughly 400-500
   needed), so only a far stronger language model than letter statistics could test that case.
+- **Other languages.** D'Agapeyeff was born in Russia and his book leans on French sources. The
+  free-table decipherment has been run in French, German, Latin, Italian, Spanish and Russian
+  (in Cyrillic and transliterated): nothing decodes. For Russian the test catches only about
+  three planted texts in four, so a Russian plaintext is unlikely rather than excluded. The
+  other searches (routes, carriers, periodic keys) still assume English.
 - **What d'Agapeyeff said.** The earliest discussions are not available online: David
   Shulman's articles in *The Cryptogram* (1952, 1959), Jim Gillogly's (1994) and Wayne
   Barker's in *Cryptologia* (1978). They are the most likely place to find what he told people.
@@ -210,6 +230,11 @@ research the cipher's history and earlier attempts.
   [Erik van Eykelen (MsgTrail, 2026)](https://msgtrail.com/posts/unmasking-the-dagapeyeff-cipher-a-multi-faceted-architecture).
 - English letter statistics: Project Gutenberg texts (*Pride and Prejudice*,
   *The Adventures of Sherlock Holmes*; *The Hound of the Baskervilles* held back for tests).
+- Other languages: Project Gutenberg texts (French: Hugo, Dumas, Voltaire; German: Fontane,
+  Kafka, Mann, Goethe; Latin: Caesar, Descartes, Cicero; Italian: Dante, Carcano; Spanish:
+  Cervantes, Dostoevsky in translation; Russian: Derzhavin, Apostol, an essay collection) and,
+  for Russian, public-domain texts of Dostoevsky and Chekhov from
+  [Lib.ru/Classics](http://az.lib.ru/).
 
 ## Credits
 
